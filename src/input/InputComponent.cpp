@@ -213,9 +213,6 @@ void InputComponent::remapInput(const QString &source, const QString &keycode, I
     }
   }
 
-  if (!m_autoRepeatActions.isEmpty() && keyState != InputBase::KeyPressed)
-    m_autoRepeatTimer->start(INITAL_AUTOREPEAT_MSEC);
-
   if (!queuedActions.isEmpty())
   {
     if (SystemComponent::Get().isWebClientConnected())

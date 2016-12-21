@@ -84,7 +84,7 @@ bool EventFilter::eventFilter(QObject* watched, QEvent* event)
     if (kevent)
     {
       system.setCursorVisibility(false);
-      if (kevent->spontaneous() && !kevent->isAutoRepeat())
+      if (kevent->spontaneous())
       {
         // We ignore the KeypadModifier here since it's practically useless
         QKeySequence key(kevent->key() | (kevent->modifiers() &= ~Qt::KeypadModifier));
