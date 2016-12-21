@@ -145,7 +145,6 @@ KonvergoWindow
   {
     id: web
     objectName: "web"
-    anchors.centerIn: parent
     settings.errorPageEnabled: false
     settings.localContentCanAccessRemoteUrls: true
     profile.httpUserAgent: components.system.getUserAgent()
@@ -154,8 +153,8 @@ KonvergoWindow
     focus: true
     property string currentHoveredUrl: ""
     onLinkHovered: web.currentHoveredUrl = hoveredUrl
-    width: mainWindow.webUIWidth
-    height: mainWindow.webUIHeight
+    width: parent.width
+    height: parent.height
 
     scale:
     {
